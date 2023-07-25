@@ -1,0 +1,6 @@
+HttpContext.Current.Response.Clear();
+                HttpContext.Current.Response.ClearHeaders();
+                HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; Invoice.txt");
+                HttpContext.Current.Response.ContentType = "text/plain";
+                HttpContext.Current.Response.Write(Jsonappend);
+                HttpContext.Current.Response.End();
